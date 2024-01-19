@@ -1,0 +1,26 @@
+[
+    {
+        "ID": 1,
+        "Title": "Palomar",
+        "Author": "Italo Calvino",
+        "Rate": 3
+    },
+    {
+        "ID": 2,
+        "Title": "Gabriel Garcia Marquez",
+        "Author": "Cent'anni di solitudine",
+        "Rate": 5
+    },
+    {
+        "ID": 3,
+        "Title": "Il vecchio e il mare",
+        "Author": "Ernest Hemingway",
+        "Rate": 5
+    },
+    {
+        "ID": 4,
+        "Title": "Le cose",
+        "Author": "Georges Perec",
+        "Rate": 3
+    }
+]
