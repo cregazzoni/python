@@ -1,4 +1,5 @@
 import json
+from pkgs import jsonUtilities
 
 def menu():
 
@@ -23,13 +24,7 @@ def menu():
 
 def view(data_file):
 
-    list_books = []
-
-    # Open JSON file for read
-    # list_books variable has a "type: list" (is a list of dictionaries)
-    with open(data_file) as fp:
-        list_books = json.load(fp)
-    fp.close()
+    list_books = jsonUtilities.load_list_books(data_file)
 
     for book in list_books:
         title = book["Title"]
@@ -45,13 +40,7 @@ def view(data_file):
 
 def insert(data_file):
 
-    list_books = []
-
-    # Open JSON file for read, and then close it
-    # Variable list_books is a "type: list" (a list of dictionaries)
-    with open(data_file) as fp:
-        list_books = json.load(fp)
-    fp.close()
+    list_books = jsonUtilities.load_list_books(data_file)
 
     # Info to insert new book
     title = input("Enter the title: ")
@@ -94,13 +83,7 @@ def insert(data_file):
 
 def select(data_file):
 
-    list_books = []
-
-    # Open JSON file for read, and then close it
-    # Variable list_books is a "type: list" (a list of dictionaries)
-    with open(data_file) as fp:
-        list_books = json.load(fp)
-    fp.close()
+    list_books = jsonUtilities.load_list_books(data_file)
 
     author = input("Enter the author: ")
     count = 0
@@ -127,13 +110,7 @@ def select(data_file):
 
 def print_book(id):
 
-    list_books = []
-
-    # Open JSON file for read, and then close it
-    # Variable list_books is a "type: list" (a list of dictionaries)
-    with open(data_file) as fp:
-        list_books = json.load(fp)
-    fp.close()
+    list_books = jsonUtilities.load_list_books(data_file)
 
     # Find ID in list books
     for book in list_books:
